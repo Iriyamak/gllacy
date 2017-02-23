@@ -63,7 +63,6 @@ html {
 		font-family: 'PT Sans Narrow', sans-serif;
 		font-size: 14px;
 		line-height: 24px;
-		text-transform: uppercase;
 	}
 	a, a:visited { /* порядок правил для ссылок имеет значение */
 		text-decoration: none;
@@ -77,7 +76,7 @@ html {
 		max-width:100%;
 	}
 	.centerfix{
-		max-width: 1170px;
+		max-width: 1200px;
 		margin: 0 auto;
 	}
 /* --------------- базовые настройки ---------*/

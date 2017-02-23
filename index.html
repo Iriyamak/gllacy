@@ -7,15 +7,14 @@
     <title>Gllacy</title>
   </head>
   <body>
-    <header class="main-header">
-      <div class="centerfix">
-        <a href="index.html"> <img src="img/nerds-logo.png" alt="главная"></a>
+    <header class="main-header centerfix">
+        <img src="img/nerds-logo.png" alt="главная">
         <nav class="main-menu">
           <ul>
             <li><a href="shop.html">Каталог</a>
               <ul class="sub-menu">
                 <li><a href="#">Новинки</a></li>
-                <li><a href="#">Сливочное</a></li>
+                <li><a href="shop.html">Сливочное</a></li>
                 <li><a href="#">Щербеты</a></li>
                 <li><a href="#">Фруктовый лед</a></li>
                 <li><a href="#">Мелорин</a></li>
@@ -43,15 +42,27 @@
             <p><a href="#">Новая регистрация</a></p>
           </div>
           <a href="#" class="cart">Корзина</a>
-
+          <div class="cart-block">
+            <div class="cart-item">
+              <img src="img/icr-orange.jpg" alt="">
+              <p>Пломбир с апельсиновым джемом</p>
+              <p>1,5 кг х 200 руб.</p>
+              <p>300 руб.</p>
+            </div>
+            <div class="cart-item">
+              <img src="img/icr-pink.jpg" alt="">
+              <p>Клубничный пломбир с присыпкой из белого шоколада</p>
+              <p>1,5 кг х 300 руб.</p>
+              <p>450 руб.</p>
+            </div>
+          </div>
           <!--
-          <a href="#" class="login">Зарегистрироваться</a>
           <a href="#" class="login">Профиль</a>
           <a href="#" class="login">Выйти</a>-->
         </div>
         <div class="phone">
           <p>С 10 до 20, ежедневно</p>
-          <h3>8 812 450-25-25</h3>
+          <b>8 812 450-25-25</b>
         </div>
         <div class="slider">
           <ul>
@@ -69,17 +80,17 @@
               <button class="btn">Давайте оба!</button></li>
           </ul>
         </div>
-      </div>
     </header>
-    <main class="centerfix">
-      <div class="2-blocks">
+    <main>
+    <div class="centerfix">
+      <div class="2-blocks promo">
         <div class="2-blocks-left">
-          <h2>Малинка даром!</h2>
+          <h3>Малинка даром!</h3>
           <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
           <button type="button" class="btn">Хочу варенье!</button>
         </div>
         <div class="2-blocks-right">
-          <h2>Шоколадки даром!</h2>
+          <h3>Шоколадки даром!</h3>
           <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
           <button type="button" class="btn">Хочу шоколадки!</button>
         </div>
@@ -88,76 +99,67 @@
         <article class="catalog-item">
           <img src="img/icr-orange.jpg" alt="мороженко">
           <img src="img/icon-hit.png" alt="хит">
-          <h2>310 <span><img src="img/icon-rubl.png" alt=""></span> /кг</h2>
+          <b>310 <span><img src="img/icon-rubl.png" alt=""></span> /кг</b>
           <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
-          <button type="button" class="btn"></button>
+          <button type="button" class="btn">Быстрый просмотр</button>
         </article>
         <article class="catalog-item">
           <img src="img/icr-cofee.jpg" alt="мороженко">
           <img src="img/icon-hit.png" alt="хит">
-          <h2>380 <span><img src="img/icon-rubl.png" alt=""></span> /кг</h2>
+          <b>380 <span><img src="img/icon-rubl.png" alt=""></span> /кг</b>
           <p>Сливочно-кофейное с кусочками шоколада</p>
-          <button type="button" class="btn"></button>
+          <button type="button" class="btn">Быстрый просмотр</button>
         </article>
         <article class="catalog-item">
           <img src="img/icr-pink.jpg.jpg" alt="мороженко">
           <img src="img/icon-hit.png" alt="хит">
-          <h2>355 <span><img src="img/icon-rubl.png" alt=""></span> /кг</h2>
+          <b>355 <span><img src="img/icon-rubl.png" alt=""></span> /кг</b>
           <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
-          <button type="button" class="btn"></button>
+          <button type="button" class="btn">Быстрый просмотр</button>
         </article>
         <article class="catalog-item">
           <img src="img/icr-brule.jpg" alt="мороженко">
           <img src="img/icon-hit.png" alt="хит">
-          <h2>4150 <span><img src="img/icon-rubl.png" alt=""></span> /кг</h2>
+          <b>4150 <span><img src="img/icon-rubl.png" alt=""></span> /кг</b>
           <p>Сливочное крем-брюле с карамельной подливкой</p>
-          <button type="button" class="btn"></button>
+          <button type="button" class="btn">Быстрый просмотр</button>
         </article>
       </section>
-      <div class="features">
+      <section class="features">
         <h2>Магазин Глейси  — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
-        <img src="img/icon-icecream.png" alt="">
-        <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
-        <img src="img/icon-leaf.png" alt="">
-        <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
-        <img src="img/icon-cow.png" alt="">
-        <p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
-        <img src="img/icon-temperature.png" alt="">
-        <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>
-      </div>
+        <div class="feature-list">
+          <div class="feature-item">
+            <img src="img/icon-icecream.png" alt="">
+            <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+          </div>
+          <div class="feature-item">
+            <img src="img/icon-leaf.png" alt="">
+            <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+          </div>
+          <div class="feature-item">
+            <img src="img/icon-cow.png" alt="">
+            <p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+          </div>
+          <div class="feature-item">
+            <img src="img/icon-temperature.png" alt="">
+            <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>
+          </div>
+        </div>
+      </section>
       <div class="2-blocks">
-        <div class="2-blocks-left">
+        <div class="2-blocks-left news">
           <p>Новое в нашем блоге</p>
           <p><a href="#">10  способов сервировки фруктовых щербетов к столу</a></p>
         </div>
-        <div class="2-blocks-right">
+        <div class="2-blocks-right subscribe">
           <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =) </p>
           <form action="" method="post">
-            <input type="email" name="" placeholder="Электронная почта">
+            <input type="email" name="email" placeholder="Электронная почта">
             <button type="submit" class="btn">Отправить</button>
           </form>
         </div>
       </div>
-
-        <div class="feature-item">
-          <img src="" alt="" class="feature-icon">
-          <h3>Веб-сайты</h3>
-          <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-          <button type="button" class="btn">ЗАКАЗАТЬ</button>
-        </div>
-        <div class="feature-item">
-          <img src="" alt="" class="feature-icon">
-          <h3>Приложения</h3>
-          <p>Покорите топ-10 приложений в AppStrore и Google Play</p>
-          <button type="button" class="btn">ЗАКАЗАТЬ</button>
-        </div>
-        <div class="feature-item">
-          <img src="" alt="" class="feature-icon">
-          <h3>Презентации</h3>
-          <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-          <button type="button" class="btn">ЗАКАЗАТЬ</button>
-        </div>
-      </div>
+    </div>
       <div class="map">
         <div class="map-adaptive"></div>
         <div class="address">
@@ -166,21 +168,20 @@
           <p>Для заказов по телефону:</p>
           <b>8 812 450-25-25</b>
           <p>(с 10 до 20 ежедневно)</p>
-          <button type="button" class="btn">Форма обратной связи</button>
+          <a type="button" class="btn">Форма обратной связи</a>
         </div>
       </div>
       <div class="contact-form">
-        <h3>Мы обязательно вам ответим!</h3>
+        <h2>Мы обязательно вам ответим!</h2>
         <form action="" method="post">
           <input type="text" name="name" placeholder="Как вас зовут?">
           <input type="email" name="email" placeholder="Ваша почта для ответа?">
           <textarea name="text" cols="30" rows="10" placeholder="Напишите что-нибудь..."></textarea>
-          <button type="button" class="btn">ОТПРАВИТЬ</button>
+          <button type="submit" class="btn">ОТПРАВИТЬ</button>
         </form>
       </div>
     </main>
-    <footer class="main-footer">
-      <div class="centerfix">
+    <footer class="main-footer centerfix">
         <div class="footer-social">
           <a href="#" class="social-btn social-btn-tw">Твиттер</a>
           <a href="#" class="social-btn social-btn-inst">Инстаграмм</a>
@@ -199,7 +200,6 @@
           <a href="https://iriyamak.github.io" class="btn">Iryna Makarova</a>
           <p>Выполнила Iryna Makarova © 2017</p>
         </div>
-      </div>
     </footer>
   </body>
 </html>
