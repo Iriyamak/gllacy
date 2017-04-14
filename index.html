@@ -14,10 +14,10 @@
     <div class="site-wrapper">
       <div class="content-wrapper">
         <header class="main-header">
-          <div class="centerfix">
+          <div class="header-top">
+            <a class="mainlogo" href="index.html"> <img src="img/logo.png" alt="главная"></a>
             <nav class="main-menu">
               <ul>
-                <li><a href="index.html"> <img src="img/logo.png" alt="главная"></a></li>
                 <li><a href="shop.html">Каталог</a>
                   <ul class="sub-menu">
                     <li><a href="#">Новинки</a></li>
@@ -32,28 +32,20 @@
               </ul>
             </nav>
             <div class="user-block">
-              <a href="#" class="search">Зарегистрироваться</a>
-              <div class="search-block">
-                <form action="">
-                  <input type="search" name="" placeholder="Что ищем?">
-                </form>
+              <div>
+              <a class="search" href=""><img src="img/icon-search.png" alt="search"></a>
               </div>
-              <a href="#" class="enter">Вход</a>
-              <div class="enter-block">
-                <form action="">
-                  <input type="text" name="" placeholder="Электронная почта">
-                  <input type="password" name="" placeholder="Пароль">
-                  <button type="submit" class="btn">Войти</button>
-                </form>
-                <p><a href="#">Забыли пароль?</a></p>
-                <p><a href="#">Новая регистрация</a></p>
+              <div class="enter">
+                <a class="login" href="#">Вход</a>
               </div>
-              <a href="#" class="cart">Корзина</a>
+              <div class="cart">
+                <a class="login" href="#" class="cart">Пусто</a>
+              </div>
             </div>
-            <div class="phone">
+          </div>
+          <div class="header-bottom">
               <p>С 10 до 20, ежедневно</p>
-              <h3>8 812 450-25-25</h3>
-            </div>
+              <span>8 812 450-25-25</span>
           </div>
         </header>
         <div class="slider">
@@ -75,14 +67,14 @@
             <label for="btn-3"></label>
           </div>
         </div>
-        <main class="centerfix">
-          <div class="2-blocks">
-            <div class="2-blocks-left">
+        <main>
+          <div class="banner">
+            <div class="banner-left">
               <h2>Малинка даром!</h2>
               <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
               <button type="button" class="btn">Хочу варенье!</button>
             </div>
-            <div class="2-blocks-right">
+            <div class="banner-right">
               <h2>Шоколадки даром!</h2>
               <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
               <button type="button" class="btn">Хочу шоколадки!</button>
@@ -207,6 +199,21 @@
           </div>
         </footer>
     </div>
+  </div>
+      <!-- Всплывающие модальные окна -->
+  <div class="modal-user">
+    <form action="">
+      <input type="text" name="" placeholder="Электронная почта">
+      <input type="password" name="" placeholder="Пароль">
+      <button type="submit" class="btn">Войти</button>
+    </form>
+    <p><a href="#">Забыли пароль?</a></p>
+    <p><a href="#">Новая регистрация</a></p>
+  </div>
+  <div class="modal-search">
+    <form action="">
+      <input type="search" name="" placeholder="Что ищем?">
+    </form>
   </div>
 </body>
 </html>
