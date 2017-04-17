@@ -292,6 +292,11 @@ body > input[type="radio"] {
       justify-content: space-between;
       padding-top: 40px;
     }
+      .banner p {
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: bold;
+      }
       .banner-left, .banner-right {
         height: 229px;
         width: 560px;
@@ -305,8 +310,36 @@ body > input[type="radio"] {
       .banner-right {
         background: #805c4c url(../img/bg-choco.jpg) no-repeat;
       }
-      .banner h2 {
+      .banner .btn {
+        display: inline-block;
+        padding: 12px 20px;
+        margin-left: 300px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        vertical-align: top;
+        color: #ffffff;
+        text-decoration: none;
+        text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+        background: #f26843;
+        background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
+        background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+        background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+        border-radius: 25px;
+        box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+      }
+      .banner .btn:hover {
+        background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+        background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+        background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+        box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+      }
 
+      .banner .btn:active {
+        background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
+        background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+        background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+        box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
       }
 
 
