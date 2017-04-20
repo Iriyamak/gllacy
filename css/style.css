@@ -123,38 +123,39 @@ body > input[type="radio"] {
   font-weight: 800;
   font-size: 60px;
 }
-.slide-btn {
-  display: inline-block;
-  padding: 12px 50px;
+.btn {
   font-weight: 600;
-  font-size: 31px;
-  line-height: 41px;
   vertical-align: top;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
   background: #f26843;
   background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
   background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
   background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
-  border-radius: 100px;
+  border: 0;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
 }
-
-.slide-btn:hover {
+.btn:hover {
   background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
   background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
   background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
-
-.slide-btn:active {
+.btn:active {
   background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
   background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
   background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
+.slide .btn {
+  display: inline-block;
+  padding: 12px 50px;
+  font-size: 31px;
+  line-height: 41px;
+  border-radius: 100px;
+}
 .slider-controls {
   position: absolute;
   bottom: 25px;
@@ -312,36 +313,226 @@ body > input[type="radio"] {
       }
       .banner .btn {
         display: inline-block;
+				float: right;
         padding: 12px 20px;
-        margin-left: 300px;
-        font-weight: 600;
+				margin-top: 20px;
         font-size: 18px;
         line-height: 24px;
-        vertical-align: top;
-        color: #ffffff;
-        text-decoration: none;
-        text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-        background: #f26843;
-        background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
-        background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
-        background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
         border-radius: 25px;
-        box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
-      }
-      .banner .btn:hover {
-        background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
-        background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
-        background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
-        box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
       }
 
-      .banner .btn:active {
-        background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
-        background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
-        background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
-        box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
-      }
+		      /*Каталог товаров*/
+		.catalog-list {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			margin-top: 35px;
+		}
+			.catalog-item {
+				width: 23.3%;
+			}
+				.catalog-item {
+					position: relative;
+				}
+				.catalog-item .hit {
+					position: absolute;
+					top: 0;
+					z-index: 2;
+				}
+				.catalog-item .price{
+					display: inline-block;
+					position: absolute;
+					top: 210px;
+          padding-left: 5px;
+					z-index: 2;
+					font-size: 45px;
+					line-height: 45px;
+					font-weight: bold;
+					color: #fff;
+					text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
+				}
+					.catalog-item .price img {
+						margin: 0;
+						padding: 0;
+						margin: 0 3px -3px 6px;
 
+					}
+					.catalog-item .price span {
+						font-size: 30px;
+						line-height: 45px;
+						vertical-align: baseline;
+					}
+				.catalog-item p {
+					font-weight: bold;
+					text-align: center;
+					margin-top: 5px;
+
+				}
+  				.catalog-item p a {
+  					border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  				}
+          .catalog-item .btn {
+            display: none;
+            padding: 12px 10px;
+    				margin: 15px 25px;
+            font-size: 18px;
+            line-height: 24px;
+            text-align: center;
+            border-radius: 25px;
+          }
+        .catalog-item:hover {
+          background: rgba(255, 255, 255, 0.3);
+          border-radius: 5px;
+          box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+        }
+          .catalog-item:hover .btn {
+            display: block;
+          }
+          .catalog-item:hover .btn:hover {
+            background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
+            background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+            background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+            box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+          }
+		/*Блок преимуществ*/
+		.features {
+			display: block;
+			margin-top: 20px;
+			background: #eee2cb url("../img/pattern-waffle.jpg");
+			border-radius: 10px;
+			padding: 23px 15px 12px;
+
+		}
+			.features h2 {
+				color: #323232;
+				font-size: 24px;
+				font-weight: 500;
+				line-height: 30px;
+				margin-bottom: 7px;
+
+			}
+				.features-desc {
+					display: flex;
+					justify-content: space-between;
+					flex-wrap: wrap;
+				}
+					.features-item {
+						width: 48.5%;
+					}
+						.features-item p {
+							position: relative;
+							padding-left: 55px;
+							display: inline-block;
+							color: rgba(50,50,50,0.8);
+							font-size: 16px;
+							line-height: 22px;
+							font-weight: 500;
+							margin: 14px 0;
+						}
+						.features-item p::before {
+							content: "";
+							position: absolute;
+							background: transparent url(../img/icon-cow.png);
+							width: 49px;
+							height: 49px;
+							left: 0;
+							top: -12px;
+						}
+							.features-item:nth-child(1) p::before {
+								background: transparent url(../img/icon-icecream.png);
+							}
+							.features-item:nth-child(2) p::before {
+								background: transparent url(../img/icon-cow.png);
+							}
+							.features-item:nth-child(3) p::before {
+								background: transparent url(../img/icon-leaf.png);
+							}
+							.features-item:nth-child(4) p::before {
+								background: transparent url(../img/icon-temperature.png);
+							}
+    /*Новости + рассылка*/
+			.two-blocks {
+				display: flex;
+				justify-content: space-between;
+				margin-top: 35px;
+			}
+        .two-blocks p {
+          color: #000;
+        }
+				.two-blocks-left, .two-blocks-right {
+					width: 48.5%;
+					box-sizing: border-box;
+					border-radius: 10px;
+				}
+        .two-blocks-left {
+          background: #f8f7f4 url("../img/bg-icecream.jpg");
+          padding-top: 20px;
+          padding-left: 15px;
+        }
+          .two-blocks-left p {
+            margin: 0;
+            padding-bottom: 10px;
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 500;
+            color: #323232;
+          }
+          .two-blocks-left a {
+            font-size: 24px;
+            line-height: 30px;
+            font-weight: bold;
+            color: #323232;
+            text-decoration: underline;
+          }
+        .two-blocks-right {
+          background: #f8f7f4 url("../img/pattern-post.jpg");
+        }
+          .substrate {
+            background: #f8f7f4;
+            margin: 5px;
+            border-radius: 9px;
+            padding: 30px 20px;
+          }
+            .substrate p {
+              margin: 0;
+              font-size: 16px;
+              line-height: 22px;
+              font-weight: 500;
+              color: #5a5a5a;
+            }
+            .substrate .post-form {
+              margin-top: 35px;
+              display: flex;
+              justify-content: space-between;
+            }
+              .post-form input {
+                flex-grow: 1;
+                font-size: 16px;
+                font-weight: 500;
+                padding-left: 10px;
+                border: 1px solid #d3d3d2;
+                border-radius: 5px;
+              }
+              .post-form input:hover {
+                border: 3px solid #c7c6c5;
+              }
+              .post-form input:focus {
+                border: 3px solid #8fbdec;
+                }
+              .post-form .btn {
+                padding: 12px 15px;
+                font-size: 18px;
+                line-height: 24px;
+                text-align: center;
+                border-radius: 25px;
+                margin-left: 10px;
+              }
+        .map {
+          width: 100%;
+          height: 425px;
+          background: url("../img/bg-cart.jpg");
+        }
 
 
 
