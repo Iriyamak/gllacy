@@ -229,7 +229,7 @@ body > input[type="radio"] {
         font-size: 16px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
       }
-      .main-menu li a:hover, .main-menu li a:active {
+      .main-menu li:hover a, .main-menu li:active a {
         background: #fff;
         border-radius: 15px;
         height: 30px;
@@ -240,20 +240,20 @@ body > input[type="radio"] {
       }
      /*-----   Подменю    -----*/
     .main-menu .sub-menu {
-        display: ;
+        display: none;
       }
-      .main-menu ul li:first-child {
+      .main-menu .opened {
         position: relative;
       }
         .sub-menu {
           position: absolute;
           display: block;
           left: 0;
-          top: 35px;
+          top: 31px;
           width: 140px;
           padding-bottom: 15px;
           background-color: #f8f7f4;
-          border-radius: 5px;
+          border-radius: 10px;
           box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5);
           z-index: 1;
         }
@@ -278,8 +278,8 @@ body > input[type="radio"] {
             padding: 5px 0 5px 20px;
             border-bottom: 2px solid #d1d0ce;
           }
-          .main-menu ul li:first-child:hover .sub-menu,
-          .main-menu ul li:first-child:active .sub-menu,
+          .main-menu .opened:hover .sub-menu,
+          .main-menu .opened:active .sub-menu,
           .sub-menu:hover {
             display: block;
           }
@@ -340,29 +340,35 @@ body > input[type="radio"] {
     .header-bottom span {
       font-size: 22px;
     }
-     /*Конец хедера*/
+     /*Конец хедера - начало блока banner*/
     .banner {
       display: flex;
       justify-content: space-between;
       padding-top: 40px;
     }
+      .banner h2{
+        font-size: 35px;
+        line-height: 41px;
+        font-weight: bold;
+      }
       .banner p {
         font-size: 18px;
         line-height: 22px;
         font-weight: bold;
       }
       .banner-left, .banner-right {
-        height: 229px;
-        width: 560px;
+        width: 48.9%;
         border-radius: 15px;
         padding: 20px;
         box-sizing: border-box;
       }
       .banner-left {
         background: #ca4360 url(../img/bg-berry.jpg) no-repeat;
+        background-size: cover;
       }
       .banner-right {
         background: #805c4c url(../img/bg-choco.jpg) no-repeat;
+        background-size: cover;
       }
       .banner .btn {
         display: inline-block;
@@ -384,19 +390,22 @@ body > input[type="radio"] {
 		}
 			.catalog-item {
 				width: 23.3%;
+        position: relative;
 			}
-				.catalog-item {
-					position: relative;
-				}
 				.catalog-item .hit {
 					position: absolute;
 					top: 0;
+          left: 0;
 					z-index: 2;
 				}
+        .catalog-item img{
+          border-radius: 100%;
+        }
 				.catalog-item .price{
 					display: inline-block;
 					position: absolute;
 					top: 210px;
+          left:0;
           padding-left: 5px;
 					z-index: 2;
 					font-size: 45px;
@@ -426,7 +435,8 @@ body > input[type="radio"] {
   					border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   				}
           .catalog-item .btn {
-            display: none;
+            opacity: 0;
+            display: block;
             padding: 12px 10px;
     				margin: 15px 25px;
             font-size: 18px;
@@ -440,7 +450,7 @@ body > input[type="radio"] {
           box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
         }
           .catalog-item:hover .btn {
-            display: block;
+          opacity: 1;
           }
           .catalog-item:hover .btn:hover {
             background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
@@ -514,12 +524,13 @@ body > input[type="radio"] {
           color: #000;
         }
 				.two-blocks-left, .two-blocks-right {
-					width: 48.5%;
+					width: 48.9%;
 					box-sizing: border-box;
-					border-radius: 10px;
+					border-radius: 15px;
 				}
         .two-blocks-left {
           background: #f8f7f4 url("../img/bg-icecream.jpg");
+          background-size: cover;
           padding-top: 20px;
           padding-left: 15px;
         }
@@ -642,7 +653,7 @@ body > input[type="radio"] {
         }
         .social-btn:hover,
         .main-footer .btn:hover {
-
+          filter: invert(100%);
         }
         .social-btn-tw {
           background: url(../img/tw.png) no-repeat center;
@@ -707,7 +718,55 @@ body > input[type="radio"] {
 
     /*------Всплывающие модальные окна--------*/
 
-  .modal-user, .modal-search, .modal-form {
+  .modal-search, .modal-form {
     display: none;
   }
-  
+
+  .modal-user {
+    position: absolute;
+    display: block;
+    right: 16%;
+    top: 57px;
+    width: 275px;
+    padding: 20px;
+    background-color: #f8f7f4;
+    border-radius: 10px;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
+    .login-form {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+      .login-form input[type="email"],
+  		.login-form input[type="password"] {
+  		  width: 99%;
+  		  margin: 0;
+  		  margin-bottom: 10px;
+  		  padding: 10px;
+  		  font-size: 14px;
+  			font-weight: 700;
+  		  line-height: 24px;
+  		  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  		  color: #999;
+  		  background-color: #fff;
+  		  border: 2px solid #d1d0ce;
+        border-radius: 10px;
+  		  outline: none;
+  		}
+      .login-form .btn {
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: bold;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 20px;
+      }
+      .login-form .restore a{
+        color: #323232;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 500;
+        border-bottom: 1px solid #d1d0ce;
+      }
