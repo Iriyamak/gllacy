@@ -18,9 +18,9 @@
             <a href="index.html"> <img src="img/logo.png" alt="главная"></a>
             <nav class="main-menu">
               <ul>
-                <li><a href="shop.html">Каталог</a>
+                <li><a href="shop.html" tabindex="1">Каталог</a>
                   <ul class="sub-menu">
-                    <li><a href="#">Новинки</a></li>
+                    <lh>Новинки</lh>
                     <li><a href="#">Сливочное</a></li>
                     <li><a href="#">Щербеты</a></li>
                     <li><a href="#">Фруктовый лед</a></li>
@@ -86,7 +86,7 @@
               <img src="img/ice-orange.jpg" alt="мороженко">
               <div class="price">
                 310<img src="img/icon-rubl.png" alt=""><span>/кг</span> </div>
-              <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+              <p><a href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></p>
               <a href="" class="btn">Быстрый просмотр</a>
             </article>
             <article class="catalog-item">
@@ -94,15 +94,15 @@
               <img src="img/ice-coffee.jpg" alt="мороженко">
               <div class="price">
                 380<img src="img/icon-rubl.png" alt=""><span>/кг</span> </div>
-              <p>Сливочно-кофейное с кусочками шоколада</p>
-              <a href="" class="btn">Быстрый просмотр<a>
+              <p><a href="">Сливочно-кофейное с кусочками шоколада</a></p>
+              <a href="" class="btn">Быстрый просмотр</a>
             </article>
             <article class="catalog-item">
               <img class="hit" src="img/icon-hit.png" alt="хит">
               <img src="img/ice-strawberry.jpg" alt="мороженко">
               <div class="price">
                 355<img src="img/icon-rubl.png" alt=""><span>/кг</span> </div>
-              <p>Сливочно-клубничное с<br> присыпкой из белого шоколада</p>
+              <p><a href="">Сливочно-клубничное с<br> присыпкой из белого шоколада</a></p>
               <a href="" class="btn">Быстрый просмотр</a>
             </article>
             <article class="catalog-item">
@@ -110,7 +110,7 @@
               <img src="img/ice-caramel.jpg" alt="мороженко">
               <div class="price">
                 415<img src="img/icon-rubl.png" alt=""><span>/кг</span> </div>
-              <p>Сливочное крем-брюле с карамельной подливкой</p>
+              <p><a href="">Сливочное крем-брюле с карамельной подливкой</a></p>
               <a href="" class="btn">Быстрый просмотр</a>
             </article>
           </section>
@@ -146,44 +146,52 @@
               </div>
             </div>
           </div>
-          <div class="map">
-            <div class="map-adaptive"></div>
-            <div class="address">
-              <p>Адрес главного офиса и офлайн магазина:</p>
-              <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
-              <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
-              <p>Для заказов по телефону:</p>
-              <b>8 812 450-25-25</b>
-              <p>(с 10 до 20 ежедневно)</p>
-              <button type="button" class="btn">Форма обратной связи</button>
-            </div>
-          </div>
-        </main>
-        <footer class="main-footer">
-          <div class="centerfix">
-            <div class="footer-social">
-              <a href="#" class="social-btn social-btn-tw">Твиттер</a>
-              <a href="#" class="social-btn social-btn-inst">Инстаграмм</a>
-              <a href="#" class="social-btn social-btn-fb">Фэйсбук</a>
-              <a href="#" class="social-btn social-btn-vk">Вконтакте</a>
-            </div>
-              <ul class="footer-menu">
-                <li><a href="">Для поставщиков</a></li>
-                <li><a href="">О производстве</a></li>
-                <li><a href="">Наши документы</a></li>
-                <li><a href="">Экологические стандарты</a></li>
-              </ul>
-            <div class="footer-copyright">
-
-              <p>Разработано <a href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.png" alt="">HTML Academy</a></p>
-
-              <p>Выполнила <a href="https://iriyamak.github.io" class="btn">Iryna Makarova</a></p>
-
-              <p>Выполнила <a href="https://natalymois.github.io" class="btn">Nataly Moiseeva</a></p>
-            </div>
-          </div>
-        </footer>
+    </main>
+  </div>
+    <div class="map">
+      <div class="map-pin"></div>
+      <div class="content-wrapper">
+        <!--<div class="map-adaptive"></div>-->
+        <div class="address">
+          <p>Адрес главного офиса и <br>офлайн магазина:</p>
+          <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
+          <br><br>
+          <p>Для заказов по телефону:</p>
+          <b>8 812 450-25-25</b>
+          <p>(с 10 до 20 ежедневно)</p>
+          <button type="button" class="btn">Форма обратной связи</button>
+        </div>
+      </div>
     </div>
+    <footer class="main-footer">
+      <div class="content-wrapper">
+        <div class="footer-social">
+          <a href="#" class="social-btn social-btn-tw">Твиттер</a>
+          <a href="#" class="social-btn social-btn-inst">Инстаграмм</a>
+          <a href="#" class="social-btn social-btn-fb">Фэйсбук</a>
+          <a href="#" class="social-btn social-btn-vk">Вконтакте</a>
+        </div>
+        <div class="footer-menu">
+          <div>
+            <a href="">Для поставщиков</a>
+            <a href="">О производстве</a></div>
+          <div>
+            <a href="">Наши документы</a>
+            <a href="">Экологические стандарты</a></div>
+
+        </div>
+        <div class="footer-copyright">
+          <section>
+            <a href="https://htmlacademy.ru"><img src="img/footer-logo.png" alt=""></a>
+            <p>Разработано HTML Academy © 2016</p>
+          </section>
+          <section>
+            <a href="https://iriyamak.github.io" class="copy">Iryna<br> Makarova</a>
+            <p>Выполнила Iryna Makarova © 2017</p>
+          </section>
+        </div>
+      </div>
+    </footer>
   </div>
       <!-- Всплывающие модальные окна -->
   <div class="modal-user">
