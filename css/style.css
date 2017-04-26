@@ -279,6 +279,10 @@ body > input[type="radio"] {
             background-color: #f6b5a5;
             border-radius: 0;
           }
+          .active {
+            background-color: #f6b5a5;
+            border-radius: 0;
+          }
           .sub-menu lh {
             font-size: 14px;
             font-weight: bold;
@@ -308,6 +312,9 @@ body > input[type="radio"] {
         .user-block .search img {
           padding: 7px;
         }
+        .search-invert {
+          filter: invert(100%);
+        }
       .enter .login, .cart .login {
         position: relative;
         padding:3px 15px 5px 45px;
@@ -330,6 +337,13 @@ body > input[type="radio"] {
           color: #323232;
         }
         .enter .login:active::before {
+          filter: invert(100%);
+        }
+        .enter-active {
+          background-color: #fff;
+          color: #323232;
+        }
+        .enter-active::before{
           filter: invert(100%);
         }
         .cart .login {
@@ -735,21 +749,34 @@ body > input[type="radio"] {
 
     /*------Всплывающие модальные окна--------*/
 
-    .modal-user, .modal-search, .feedback {
-      display: none;
-    }
       /*---Вход пользователя---*/
-    .modal-user {
-      position: absolute;
-      right: 16%;
-      top: 57px;
-      width: 275px;
-      padding: 20px;
-      background-color: #f8f7f4;
-      border-radius: 10px;
-      box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5);
-      z-index: 2;
-    }
+      .popup-user, .popup-search {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .is-visible {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 1s;
+      }
+      .modal-user {
+        position: absolute;
+        right: 16%;
+        top: 57px;
+        width: 275px;
+        padding: 20px;
+        background-color: #f8f7f4;
+        border-radius: 10px;
+        box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5);
+        z-index: 2;
+      }
       .login-form {
         display: flex;
         justify-content: space-between;
@@ -805,6 +832,7 @@ body > input[type="radio"] {
           border-bottom: 1px solid #d1d0ce;
         }
         /*---Форма поиска---*/
+
     .modal-search {
       position: absolute;
       right: 24%;
@@ -838,6 +866,7 @@ body > input[type="radio"] {
           }
       /*---Обратная связь---*/
     .feedback {
+      display: none;
       position: fixed;
       left: 50%;
       top: 50%;
