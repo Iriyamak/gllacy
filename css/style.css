@@ -71,6 +71,10 @@ html {
 		font-size: 18px;
 		line-height: 30px;
 	}
+  /*Убираем синюю внешнюю обводку  активной кнопки (браузерную по умолчанию)*/
+  button:enabled {
+    outline: none;
+  }
 
  /*---Настройки фона и слайдера---*/
 
@@ -323,6 +327,18 @@ body > input[type="radio"] {
         background-color: rgba(255, 255, 255, 0.2);
         border-radius: 15px;
       }
+      .cart-full {
+        display: none;
+      }
+        .cart-full .login {
+          position: relative;
+          padding:3px 15px 5px 45px;
+          display: inline-block;
+          margin-right: 10px;
+          background-color: rgba(255, 255, 255, 1);
+          border-radius: 15px;
+          color:  #323232;
+        }
         .enter .login::before {
           content: "";
           position: absolute;
@@ -330,7 +346,7 @@ body > input[type="radio"] {
           width: 21px;
           height: 19px;
           left: 18px;
-          top: 7px;
+          top: 6px;
         }
         .enter .login:active {
           background-color: rgba(255, 255, 255, 1);
@@ -346,12 +362,24 @@ body > input[type="radio"] {
         .enter-active::before{
           filter: invert(100%);
         }
-        .cart .login {
+        .cart .login, .cart-full .login {
           padding-right: 30px;
+        }
+        .cart .login::before,
+        .cart-full .login::before {
+          content: "";
+          position: absolute;
+          width: 21px;
+          height: 20px;
+          left: 18px;
+          top: 6px;
         }
         .cart .login::before {
           background: transparent url(../img/icon-cart.png);
-          height: 20px;
+
+        }
+        .cart-full .login::before {
+          background: transparent url(../img/icon-cart-full.png);
         }
   .header-bottom {
     flex-direction: column;
@@ -422,6 +450,9 @@ body > input[type="radio"] {
 			.catalog-item {
 				width: 23.3%;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 			}
         .catalog-item img{
           border-radius: 100%;
@@ -464,11 +495,12 @@ body > input[type="radio"] {
   				.catalog-item p a {
   					border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   				}
+
           .catalog-item .btn {
             opacity: 0;
             display: block;
             padding: 12px 10px;
-    				margin: 15px 25px;
+    				margin: 5px 25px 20px;
             font-size: 18px;
             line-height: 24px;
             text-align: center;
@@ -750,7 +782,7 @@ body > input[type="radio"] {
     /*------Всплывающие модальные окна--------*/
 
       /*---Вход пользователя---*/
-      .popup-user, .popup-search {
+      .popup-user, .popup-search, .popup-cart {
         position: fixed;
         left: 0;
         top: 0;
@@ -831,8 +863,8 @@ body > input[type="radio"] {
           font-weight: 500;
           border-bottom: 1px solid #d1d0ce;
         }
-        /*---Форма поиска---*/
 
+        /*---Форма поиска---*/
     .modal-search {
       position: absolute;
       right: 24%;
@@ -864,20 +896,110 @@ body > input[type="radio"] {
         .search-form input:focus {
           border: 3px solid #8fbdec;
           }
+      /*---Выпадающий блок корзины---*/
+    .mini-cart-info {
+      position: absolute;
+      right: 8%;
+      top: 57px;
+      max-width: 540px;
+      font-size: 13px;
+      line-height: 16px;
+      font-weight: 500;
+        color: #999;
+      padding: 15px 10px;
+      background-color: #f8f7f4;
+      border-radius: 10px;
+      box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5);
+      z-index: ;
+    }
+    .mini-cart-info table {
+      padding: 5px 0;
+      border-bottom: 1px solid #cacac7;
+    }
+      .mini-cart-info a {
+        margin: 0;
+        padding: 0;
+      }
+      .remove img {
+        cursor: pointer;
+	      vertical-align: middle;
+      }
+      .mini-cart-info .image {
+        padding: 0 6px;
+      }
+      .mini-cart-info .name {
+        width: 230px;
+        text-align: left;
+        margin-right: 20px;
+      }
+      .price-item {
+        color: rgba(153, 153, 153, 0.7);
+        padding-right: 20px;
+      }
+      .mini-cart-info .total {
+        float: right;
+        font-size: 15px;
+        line-height: 18px;
+        font-weight: bold;
+        color: #000;
+        border: 0;
+      }
+      .mini-cart-info .button {
+        padding: 10px;
+
+       margin-right: 0px;
+       ;
+      }
+      .mini-cart-info .btn {
+        display: inline-block;
+				float: right;
+        padding: 12px 20px;
+				margin-top: 20px;
+        font-size: 18px;
+        line-height: 24px;
+        border-radius: 25px;
+      }
+
       /*---Обратная связь---*/
+      /*Modal Overlay*/
+  .modal-overlay {
+    background:rgba(0,0,0,.5);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    overflow: auto;
+    padding: 1.5em;
+    position: fixed;
+    transition: opacity .2s;
+    z-index: -1;
+  }
+  .modal-overlay[aria-hidden="true"] {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .modal-overlay[aria-hidden="false"] {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+  }
+
+.modal-overlay[aria-hidden="false"] .feedback {
+  transform: scale(1);
+  outline: none;
+}
     .feedback {
-      display: none;
-      position: fixed;
-      left: 50%;
-      top: 50%;
-      width: 430px;
-      margin-top: -220px;
-      margin-left: -235px;
+      max-width: 430px;
+      position: relative;
+      width: 100%;
+      margin: auto;
       padding: 20px;
       background-color: #f8f7f4;
       border-radius: 15px;
-      box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5);
-      z-index: 1;
+      box-shadow: 0 30px 50px rgba(0, 0, 0, 0.8);
+      transform: scale(.7);
+      transition: transform .3s;
     }
         .feedback-form {
           display: flex;
@@ -914,7 +1036,32 @@ body > input[type="radio"] {
             .feedback-form textarea:focus {
               border: 3px solid #8fbdec;
               }
-          .modal-content-close {
+
+          /*Close Modal Button*/
+
+        .btn-close {
+          background: none;
+          border: none;
+          cursor: pointer;
+          color: #999;
+          font-family: arial;
+          font-size: 35px;
+          font-weight: 700;
+          line-height: 1;
+          padding: 0;
+          position: absolute;
+          right: .25em;
+          top: .25em;
+          z-index: 2;
+        }
+        .btn-close:hover {
+          color: #c12f48;
+        }
+        .btn-close:focus {
+          outline: 1px dotted;
+        }
+
+          /*.modal-content-close {
       		  position: absolute;
       		  top: 10px;
       		  right: 10px;
@@ -942,7 +1089,9 @@ body > input[type="radio"] {
       		}
       		.modal-content-close::after {
       		  transform: rotate(-45deg);
-      		}
+      		}*/
+
+
           .feedback h2 {
       		  margin: 0;
       		  margin-bottom: 20px;

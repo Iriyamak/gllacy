@@ -14,6 +14,7 @@
    <input type="radio" id="btn-2" name="toggle">
    <input type="radio" id="btn-3" name="toggle">
    <div class="site-wrapper">
+     <div id="page">
      <div class="content-wrapper">
        <header class="main-header">
          <div class="header-top">
@@ -40,6 +41,9 @@
              <div class="enter">
                <a class="login" href="#">Вход</a>
              </div>
+             <div class="cart-full">
+               <a class="login" href="#">2 товара</a>
+               </div>
              <div class="cart">
                <a class="login" href="#">Пусто</a>
              </div>
@@ -84,35 +88,43 @@
          </div>
          <section class="catalog-list">
            <article class="catalog-item">
-             <img class="hit" src="img/icon-hit.png" alt="хит">
-             <img src="img/ice-orange.jpg" alt="мороженко">
-             <div class="price">
-               310<img src="img/icon-rubl.png" alt=""><span>/кг</span> </div>
-             <p><a href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></p>
+            <div class="content">
+               <img class="hit" src="img/icon-hit.png" alt="хит">
+               <img src="img/ice-orange.jpg" alt="мороженко">
+               <div class="price">
+                 310<img src="img/icon-rubl.png" alt=""><span>/кг</span> </div>
+               <p><a href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></p>
+           </div>
              <a href="#" class="btn">Быстрый просмотр</a>
            </article>
            <article class="catalog-item">
-             <img class="hit" src="img/icon-hit.png" alt="хит">
-             <img src="img/ice-coffee.jpg" alt="мороженко">
-             <div class="price">
-               380<img src="img/icon-rubl.png" alt=""><span>/кг</span> </div>
-             <p><a href="">Сливочно-кофейное с кусочками шоколада</a></p>
+             <div class="content">
+               <img class="hit" src="img/icon-hit.png" alt="хит">
+               <img src="img/ice-coffee.jpg" alt="мороженко">
+               <div class="price">
+                 380<img src="img/icon-rubl.png" alt=""><span>/кг</span> </div>
+               <p><a href="">Сливочно-кофейное с кусочками шоколада</a></p>
+             </div>
              <a href="#" class="btn">Быстрый просмотр</a>
            </article>
            <article class="catalog-item">
-             <img class="hit" src="img/icon-hit.png" alt="хит">
-             <img src="img/ice-strawberry.jpg" alt="мороженко">
-             <div class="price">
-               355<img src="img/icon-rubl.png" alt=""><span>/кг</span> </div>
-             <p><a href="">Сливочно-клубничное с<br> присыпкой из белого шоколада</a></p>
+             <div class="content">
+               <img class="hit" src="img/icon-hit.png" alt="хит">
+               <img src="img/ice-strawberry.jpg" alt="мороженко">
+               <div class="price">
+                 355<img src="img/icon-rubl.png" alt=""><span>/кг</span> </div>
+               <p><a href="">Сливочно-клубничное с<br> присыпкой из белого шоколада</a></p>
+             </div>
              <a href="#" class="btn">Быстрый просмотр</a>
            </article>
            <article class="catalog-item">
-             <img class="hit" src="img/icon-hit.png" alt="хит">
-             <img src="img/ice-caramel.jpg" alt="мороженко">
-             <div class="price">
-               415<img src="img/icon-rubl.png" alt=""><span>/кг</span> </div>
-             <p><a href="">Сливочное крем-брюле с карамельной подливкой</a></p>
+             <div class="content">
+               <img class="hit" src="img/icon-hit.png" alt="хит">
+               <img src="img/ice-caramel.jpg" alt="мороженко">
+               <div class="price">
+                 415<img src="img/icon-rubl.png" alt=""><span>/кг</span> </div>
+               <p><a href="">Сливочное крем-брюле с карамельной подливкой</a></p>
+             </div>
              <a href="#" class="btn">Быстрый просмотр</a>
            </article>
          </section>
@@ -160,7 +172,7 @@
          <p>Для заказов по телефону:</p>
          <b>8 812 450-25-25</b>
          <p>(с 10 до 20 ежедневно)</p>
-         <button type="button" class="btn">Форма обратной связи</button>
+         <button type="button" class="btn" id="modal_open">Форма обратной связи</button>
        </div>
      </div>
    </div>
@@ -175,11 +187,12 @@
        <div class="footer-menu">
          <div>
            <a href="">Для поставщиков</a>
-           <a href="">О производстве</a></div>
+           <a href="">О производстве</a>
+         </div>
          <div>
            <a href="">Наши документы</a>
-           <a href="">Экологические стандарты</a></div>
-
+           <a href="">Экологические стандарты</a>
+         </div>
        </div>
        <div class="footer-copyright">
          <section>
@@ -190,42 +203,81 @@
            <a href="https://iriyamak.github.io" class="copy">Iryna<br> Makarova</a>
          <p>Выполнили Iryna Makarova & Natalia Moiseeva © 2017</p>
          </section>
-
        </div>
      </div>
    </footer>
-
- </div>
+</div> <!-- end #page -->
      <!-- Всплывающие модальные окна -->
-  <div class="popup-user">
-     <div class="modal-user">
-       <form class="login-form" action="" method="post">
-         <input type="email" name="email" placeholder="Электронная почта">
-         <input type="password" name="password" placeholder="Пароль">
-         <button type="submit" class="btn">Войти</button>
-         <div class="restore">
-           <a href="#">Забыли пароль?</a><br>
-           <a href="#">Новая регистрация</a>
+    <div class="content-wrapper">
+      <div class="popup-user">
+         <div class="modal-user">
+           <form class="login-form" action="" method="post">
+             <input type="email" name="email" placeholder="Электронная почта">
+             <input type="password" name="password" placeholder="Пароль">
+             <button type="submit" class="btn">Войти</button>
+             <div class="restore">
+               <a href="#">Забыли пароль?</a><br>
+               <a href="#">Новая регистрация</a>
+             </div>
+           </form>
          </div>
+      </div>
+      <div class="popup-search">
+       <div class="modal-search">
+         <form class="search-form" action="" method="post">
+           <input type="search" name="search" placeholder="Что ищем?">
+         </form>
+       </div>
+     </div>
+     <div class="popup-cart">
+       <div class="mini-cart-info">
+         <table>
+            <tr height="50">
+              <td class="remove"><a href=""><img title="Удалить" alt="Удалить" src="img/close.png"></a></td>
+              <td class="image"><a href="" title=""><img src="img/ice-orange-min.jpg" alt=""></a></td>
+              <td class="name">Пломбир с апельсиновым джемом</td>
+              <td class="massa">1,5 кг x</td>
+              <td class="price-item">200 руб.</td>
+              <td class="total-item">300 руб.</td>
+            </tr>
+            <tr height="50">
+              <td class="remove"><a href=""><img title="Удалить" alt="Удалить" src="img/close.png"></a></td>
+              <td class="image"><a href="" title=""><img src="img/ice-jam-min.jpg" alt=""></a></td>
+              <td class="name">Клубничный пломбир с присыпкой
+      из белого шоколада</td>
+              <td>1,5 кг x</td>
+              <td class="price-item">300 руб.</td>
+              <td class="total-item">450 руб.</td>
+            </tr>
+          </table>
+          <table class="total">
+            <tr>
+              <td>Итого:&nbsp;</td>
+              <td class="total">750 руб.</td>
+            </tr>
+          </table>
+          <div class="button">
+          <a href="" class="btn">Оформить заказ</a></div>
+       </div>
+    </div>
+    <div class="modal-overlay" id="modal_window"
+             aria-hidden="true" role="dialog"
+             aria-labelledby="modal_title">
+     <div class="feedback" id="modal_holder" role="document">
+       <button class="btn-close" id="modal_close" type="button" aria-label="close">
+          &times;
+        </button>
+       <h2 id="modal_title">Мы обязательно вам ответим!</h2>
+       <form class="feedback-form" action="" method="post">
+         <input type="text" name="name" placeholder="Как вас зовут?">
+         <input type="email" name="email" placeholder="Ваша почта для ответа?">
+         <textarea name="text" rows="5" placeholder="Напишите что-нибудь..."></textarea>
+         <button type="button" class="btn">Отправить</button>
        </form>
      </div>
-  </div>
-  <div class="popup-search">
-   <div class="modal-search">
-     <form class="search-form" action="" method="post">
-       <input type="search" name="search" placeholder="Что ищем?">
-     </form>
+   </div>
    </div>
  </div>
- <div class="feedback">
-   <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
-   <h2>Мы обязательно вам ответим!</h2>
-   <form class="feedback-form" action="" method="post">
-     <input type="text" name="name" placeholder="Как вас зовут?">
-     <input type="email" name="email" placeholder="Ваша почта для ответа?">
-     <textarea name="text" rows="5" placeholder="Напишите что-нибудь..."></textarea>
-     <button type="button" class="btn">Отправить</button>
-   </form>
- </div>
+ <script src="js/modalJs.js"></script>
 </body>
 </html>

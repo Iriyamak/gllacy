@@ -1,4 +1,5 @@
 $(function(){
+/*-----При клике на блок поиска всплывает модальное окно поиска----*/
 	//open popup-search
    $('.search').click(function(event){
 	  event.preventDefault();
@@ -26,7 +27,7 @@ $(function(){
 	  $('.modal-user').slideToggle(500);*/
    });
    
-   //close popup-search
+   //close popup-user
    $('.popup-user').on('click', function(event){
 	  if( $(event.target).is('.popup-user')) {
 			event.preventDefault();
@@ -43,13 +44,35 @@ $(function(){
 	    }
     });
 	
-   $('.address > .btn').click(function(event){
+	/*-----При клике на кнопку обратной связи всплывает модальное окно формы связи----*/
+   /*$('.address > .btn').click(function(event){
 	   event.preventDefault();
 	  $('.feedback').slideToggle(500);
    });
    
    $('.modal-content-close').click(function(e){
 	  $('.feedback').css('display','none');
+   });*/
+   
+   /*-----При клике на блок корзины появляется модальное окно корзины с товарами (пример, т.к. на самом деле товары в корзину добавляются со страницы конкретного товара методом ajax)----*/
+  //open popup-cart
+   $('.slider .btn').on('click', function(event){
+      event.preventDefault();
+	  $('.cart').css('display','none');
+	  $('.cart-full').css('display','block');
+	  $('.popup-cart').addClass('is-visible');
+   });
+   
+   //close popup-user
+   $('.popup-cart').on('click', function(event){
+	  if( $(event.target).is('.popup-cart')) {
+			event.preventDefault();
+			$(this).removeClass('is-visible');
+			 $('.cart-full').css('display','none');
+			 $('.cart').css('display','block');
+	  }
    });
  
 });
+
+ 
