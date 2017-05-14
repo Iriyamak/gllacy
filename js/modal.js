@@ -1,4 +1,5 @@
-$(function(){
+jQuery.noConflict();
+jQuery(document).ready(function($){
 /*-----При клике на блок поиска всплывает модальное окно поиска----*/
 	//open popup-search
    $('.search').click(function(event){
@@ -16,6 +17,15 @@ $(function(){
 			$('.search').css('background-color','rgba(255, 255, 255, 0.2)');
 	  }
    });
+   //Закрываем модальное окно popup-search кликом по клавише "Esc" 
+	$(document).keyup(function(event){
+    	if(event.which=='27'){
+    		$('.popup-search').removeClass('is-visible');
+			$('.search img').removeClass('search-invert');
+			$('.search').css('background-color','rgba(255, 255, 255, 0.2)');
+	    }
+    });
+   
    /*-----При клике на блок входа всплывает модальное окно личного кабинета----*/
   //open popup-user
    $('.enter').on('click', function(event){
@@ -36,10 +46,10 @@ $(function(){
 	  }
    });
    
-   //close popup when clicking the esc keyboard button
+   //Закрываем модальное окно popup-user кликом по клавише "Esc" 
 	$(document).keyup(function(event){
     	if(event.which=='27'){
-    		$('.popup').removeClass('is-visible');
+    		$('.popup-user').removeClass('is-visible');
 			$('.enter>.login').removeClass('enter-active').css('background-color','rgba(255, 255, 255, 0.2)').css('color','#fff');
 	    }
     });
@@ -54,9 +64,10 @@ $(function(){
 	  $('.feedback').css('display','none');
    });*/
    
+   
    /*-----При клике на блок корзины появляется модальное окно корзины с товарами (пример, т.к. на самом деле товары в корзину добавляются со страницы конкретного товара методом ajax)----*/
   //open popup-cart
-   $('.slider .btn').on('click', function(event){
+   $('.cart').on('click', function(event){
       event.preventDefault();
 	  $('.cart').css('display','none');
 	  $('.cart-full').css('display','block');

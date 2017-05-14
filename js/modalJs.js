@@ -10,7 +10,7 @@ function swap () {
 swap();
 
 
-// модальное окно
+// модальное окно обратной связи feedback
 (function() {
 
   'use strict';
