@@ -467,22 +467,27 @@ body > input[type="radio"] {
         flex-direction: column;
         justify-content: space-between;
 			}
+        .catalog-item .content {
+          display: flex;
+          flex-direction: column;
+        }
       .catalog-item:nth-child(n+5) {
           margin-top: -55px;
       }
-        .catalog-item img{
+        .content img{
           border-radius: 100%;
+          align-self: center;
         }
 				.catalog-item .hit {
 					position: absolute;
 					top: 0;
+          left: 3%;
 					z-index: 2;
 				}
         .catalog-item .price{
 					display: inline-block;
-					position: absolute;
-					top: 50%;
-          left:0;
+					margin-top: -60px;
+          margin-left: 0;
           padding-left: 5px;
 					z-index: 2;
 					font-size: 45px;
@@ -516,7 +521,7 @@ body > input[type="radio"] {
             opacity: 0;
             display: block;
             padding: 12px 10px;
-    				margin: 5px 25px 20px;
+    				margin: 0 25px 20px;
             font-size: 18px;
             line-height: 24px;
             text-align: center;
@@ -1191,7 +1196,7 @@ body > input[type="radio"] {
             padding: 8px 13px;
             outline: none;
             border: 0;
-          }  
+          }
             fieldset select:hover {
               background: #fff;
               color: #999;
@@ -1518,6 +1523,21 @@ body > input[type="radio"] {
   }
 }
 @media screen and (max-width:885px) {
+  .header-top {
+    margin-bottom: 15px;
+  }
+  .header-top a {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .top-right {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .main-menu {
+    margin-left: 0px;
+  }
   .sort-form {
     display: flex;
   }
@@ -1555,5 +1575,19 @@ body > input[type="radio"] {
     top: 50%;
     font-size: 45px;
     line-height: 45px;
+  }
+}
+@media screen and (max-width:680px) {
+  .filters-checkbox {
+    padding-left: 20px;
+  }
+}
+@media screen and (max-width:620px) {
+  .sort-form fieldset:nth-child(4) > .select {
+  height: 72px;
+  border-radius: 50px;
+}
+  .select ul {
+    flex-wrap: wrap;
   }
 }
